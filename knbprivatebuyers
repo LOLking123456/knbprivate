@@ -1,0 +1,296 @@
+
+        local Library =
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("🏀 Legend HandlesYT | Private Buyers KNB | 🏀", "Serpent")
+
+        -- MAIN
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Main")
+
+ 
+   MainSection:NewSlider("Hitbox Reach (OP)", "Changes Reach Size (Nobody Can See it)", 20, 0, function(v)
+   local Player = game:GetService("Players").LocalPlayer
+            local Character = Player.Character
+            Character['LeftHand'].Size = Vector3.new(1, v, 1)
+            Character['RightHand'].Size = Vector3.new(1, v, 1)
+
+end)
+
+
+
+  MainSection:NewSlider("(FIX) Bypass Speed", "Bypassed Speed", 40, 16, function(v)
+getgenv().WalkSpeedValue = v; --set your desired walkspeed here
+
+local Player = game:service'Players'.LocalPlayer;
+
+Player.Character.Humanoid:GetPropertyChangedSignal'WalkSpeed':Connect(function()
+
+Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeedValue;
+
+end)
+
+Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeedValue;
+  end)
+
+
+     
+        MainSection:NewButton(
+            "INF Stamina + Auto Sprint",
+            "DON'T PRESS SHIFT AGAIN AFTER USING THIS!",
+            function()
+                getgenv().WalkSpeedValue = 20; --set your desired walkspeed here
+
+local Player = game:service'Players'.LocalPlayer;
+
+Player.Character.Humanoid:GetPropertyChangedSignal'WalkSpeed':Connect(function()
+
+Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeedValue;
+
+end)
+
+Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeedValue;
+
+game:GetService'Workspace'.Camera.FieldOfView = 80
+
+Player = "LocalPlayer" --- you can still put any player name here
+
+AnimationId = "913376220" --- add ID's from the bottom[/size]
+local Anim = Instance.new("Animation") --- Creates animation[/size]
+Anim.AnimationId = "rbxassetid://"..AnimationId ---- inserts the ID[/size]
+local k = game.Players[Player].Character.Humanoid:LoadAnimation(Anim) --- makes the animation a function[/size]
+k:Play() --Play the animation ----- Runs the animation.[/size]
+k:AdjustSpeed(1) --Set '1' to any value you want to adjust the animation speed. I suggest keep it here. Looks smoother.[/size]
+            end)
+
+  MainSection:NewLabel("Stat Changer")
+        MainSection:NewButton(
+            "Boost Shooting Accuracy",
+            "Boost Your Shot %",
+            function()
+               game.Players.LocalPlayer.Character.Shoot_Accuracy.Value = 200
+            end)
+            
+            MainSection:NewSlider("Boost Dribble Speed", "Boost Dribble Speed", 100, 0, function(v)
+      game.Players.LocalPlayer.Character.Dribble_Skill.Dribble_Speed.Value = v
+            end)
+
+ MainSection:NewSlider("Boost Fade %", "Boost Fade %", 100, 0, function(v)
+      game.Players.LocalPlayer.Character.Dribble_Skill.Fade_Percent.Value = 200
+            end)
+            
+            MainSection:NewButton(
+            "No Bump",
+            "No Bumps from picks, etc",
+            function()
+              game.Players.LocalPlayer.Character.States.NoBump.Value = true
+            end)
+            
+            MainSection:NewButton(
+            "Boost Dribble Length",
+            "How Long You Can Have The Ball In Your Hands",
+            function()
+      game.Players.LocalPlayer.Character.Dribble_Skill.Dribble_Length.Value = 100
+            end)
+            
+            MainSection:NewButton(
+            "Boost Shooting Level",
+            "Boost Your Shooting Level",
+            function()
+                game.Players.LocalPlayer.Character.Shoot_LVL.Value = 1000
+            end)
+       
+            local Cams = Window:NewTab("More")
+            local CamsSection = Cams:NewSection("More")
+            
+            CamsSection:NewButton("Zoom Out Max", "Zoom your Camrea How Far You Would Like It", function()
+   local LocalPlayer = game:GetService("Players").LocalPlayer
+        LocalPlayer.CameraMaxZoomDistance = 9e9
+        LocalPlayer.DevCameraOcclusionMode = Enum.DevCameraOcclusionMode.Invisicam("Clicked")
+end)
+
+
+CamsSection:NewButton("FE Dance 1", "In Game Dance BTW", function()
+Player = "LocalPlayer" --- you can still put any player name here
+
+AnimationId = "8048851529" --- add ID's from the bottom[/size]
+local Anim = Instance.new("Animation") --- Creates animation[/size]
+Anim.AnimationId = "rbxassetid://"..AnimationId ---- inserts the ID[/size]
+local k = game.Players[Player].Character.Humanoid:LoadAnimation(Anim) --- makes the animation a function[/size]
+k:Play() --Play the animation ----- Runs the animation.[/size]
+k:AdjustSpeed(1) --Set '1'
+end)
+        
+CamsSection:NewButton("FE Dance 2", "In Game Dance BTW", function()
+Player = "LocalPlayer" --- you can still put any player name here
+
+AnimationId = "8049083514" --- add ID's from the bottom[/size]
+local Anim = Instance.new("Animation") --- Creates animation[/size]
+Anim.AnimationId = "rbxassetid://"..AnimationId ---- inserts the ID[/size]
+local k = game.Players[Player].Character.Humanoid:LoadAnimation(Anim) --- makes the animation a function[/size]
+k:Play() --Play the animation ----- Runs the animation.[/size]
+k:AdjustSpeed(1) --Set '1'
+end)
+
+
+CamsSection:NewButton("FE Dance 3", "In Game Dance BTW", function()
+Player = "LocalPlayer" --- you can still put any player name here
+
+AnimationId = "8049203011" --- add ID's from the bottom[/size]
+local Anim = Instance.new("Animation") --- Creates animation[/size]
+Anim.AnimationId = "rbxassetid://"..AnimationId ---- inserts the ID[/size]
+local k = game.Players[Player].Character.Humanoid:LoadAnimation(Anim) --- makes the animation a function[/size]
+k:Play() --Play the animation ----- Runs the animation.[/size]
+k:AdjustSpeed(1) --Set '1'
+end)
+
+CamsSection:NewButton("FE Dance 4", "In Game Dance BTW", function()
+Player = "LocalPlayer" --- you can still put any player name here
+
+AnimationId = "8049236044" --- add ID's from the bottom[/size]
+local Anim = Instance.new("Animation") --- Creates animation[/size]
+Anim.AnimationId = "rbxassetid://"..AnimationId ---- inserts the ID[/size]
+local k = game.Players[Player].Character.Humanoid:LoadAnimation(Anim) --- makes the animation a function[/size]
+k:Play() --Play the animation ----- Runs the animation.[/size]
+k:AdjustSpeed(1) --Set '1'
+end)
+
+CamsSection:NewButton("Undetected Fly (X)", "Press X To Turn On & Off", function()
+local plr = game.Players.LocalPlayer
+local mouse = plr:GetMouse()
+
+localplayer = plr
+
+if workspace:FindFirstChild("Core") then
+workspace.Core:Destroy()
+end
+
+local Core = Instance.new("Part")
+Core.Name = "Core"
+Core.Size = Vector3.new(0.05, 0.05, 0.05)
+
+spawn(function()
+Core.Parent = workspace
+local Weld = Instance.new("Weld", Core)
+Weld.Part0 = Core
+Weld.Part1 = localplayer.Character.LowerTorso
+Weld.C0 = CFrame.new(0, 0, 0)
+end)
+
+workspace:WaitForChild("Core")
+
+local torso = workspace.Core
+flying = true
+local speed=10
+local keys={a=false,d=false,w=false,s=false}
+local e1
+local e2
+local function start()
+local pos = Instance.new("BodyPosition",torso)
+local gyro = Instance.new("BodyGyro",torso)
+pos.Name="EPIXPOS"
+pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+pos.position = torso.Position
+gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+gyro.cframe = torso.CFrame
+repeat
+wait()
+localplayer.Character.Humanoid.PlatformStand=true
+local new=gyro.cframe - gyro.cframe.p + pos.position
+if not keys.w and not keys.s and not keys.a and not keys.d then
+speed=5
+end
+if keys.w then
+new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+speed=speed+0
+end
+if keys.s then
+new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+speed=speed+0
+end
+if keys.d then
+new = new * CFrame.new(speed,0,0)
+speed=speed+0
+end
+if keys.a then
+new = new * CFrame.new(-speed,0,0)
+speed=speed+0
+end
+if speed>10 then
+speed=5
+end
+pos.position=new.p
+if keys.w then
+gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
+elseif keys.s then
+gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
+else
+gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+end
+until flying == false
+if gyro then gyro:Destroy() end
+if pos then pos:Destroy() end
+flying=false
+localplayer.Character.Humanoid.PlatformStand=false
+speed=10
+end
+e1=mouse.KeyDown:connect(function(key)
+if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+if key=="w" then
+keys.w=true
+elseif key=="s" then
+keys.s=true
+elseif key=="a" then
+keys.a=true
+elseif key=="d" then
+keys.d=true
+elseif key=="x" then
+if flying==true then
+flying=false
+else
+flying=true
+start()
+end
+end
+end)
+e2=mouse.KeyUp:connect(function(key)
+if key=="w" then
+keys.w=false
+elseif key=="s" then
+keys.s=false
+elseif key=="a" then
+keys.a=false
+elseif key=="d" then
+keys.d=false
+end
+end)
+start()
+            end)
+            
+            CamsSection:NewSlider("FOV", "Changes the FOV", 120, 16, function(v)
+            game.Workspace.CurrentCamera.FieldOfView = v
+            end)
+            
+CamsSection:NewButton("Name Generator", "Generates a Random Name FE", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/inik7xjG'))()("Clicked")
+end)
+
+CamsSection:NewButton("Trash Talk", "Hold J and It Is FE", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/UgQFnhm4'))()("Clicked")
+    end)
+       
+           local Teleports = Window:NewTab("Teleports")
+            local TeleportsSection = Teleports:NewSection("Teleports")
+            
+            TeleportsSection:NewButton("Rejoin", "Rejoin", function()
+game:GetService("TeleportService"):Teleport(5012114941, LocalPlayer)
+            end)
+            
+            TeleportsSection:NewButton("Server Hop", "Server Hop", function()
+game:GetService("TeleportService"):Teleport(5012114941, LocalPlayer)
+            end)
+
+        local Credits = Window:NewTab("Credits")
+        local CreditsSection = Credits:NewSection("Credits")
+        
+        CreditsSection:NewLabel("Made By: Legend HandlesYT")
+        
